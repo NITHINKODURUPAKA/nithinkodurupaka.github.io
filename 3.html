@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squares and Circles</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Center the outer square */
+        .outer-square {
+            width: 600px;
+            height: 600px;
+            background-color: #fff;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        
+        /* Inner Elements */
+        .inner-element {
+            background-color: green;
+            margin: 10px;
+        }
+        
+        /* Circle */
+        .inner-element.circle {
+            border-radius: 50%;
+            background-color: blue;
+        }
+        
+        /* Alternate styling for squares and circles */
+        .outer-square .inner-element:nth-child(even) {
+            background-color: blue;
+        }
+        
+        .outer-square .inner-element:nth-child(odd) {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-square">
+        <div class="inner-element"></div>
+        <div class="inner-element circle"></div>
+        <div class="inner-element"></div>
+        <div class="inner-element circle"></div>
+        <div class="inner-element"></div>
+        <div class="inner-element circle"></div>
+        <div class="inner-element"></div>
+        <div class="inner-element circle"></div>
+        <div class="inner-element"></div>
+    </div>
+</body>
+</html>
